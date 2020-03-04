@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <title>¡Yan Ken Po!</title>
+    <meta name='description' content='Juego de yan ken po (piedra, papel o tijera) hecho con Javascript y Tailwind'>
+
+	<link rel='stylesheet' href='global.css'>
+
+	<script defer src='main.js'></script>
+</head>
+<body>
+
+    <header class="bg-black flex flex-wrap content-center h-24">
+        <div class="w-full text-center">
+            <h2 id="title" class="text-5xl text-white font-extrabold"></h2>
+        </div>
+    </header>
+
+    <div class="container py-4 sm:py-10">
+        <div class="flex flex-wrap justify-center sm:mx-16 lg:mx-32">
+
+            <div class="w-5/12 text-center border-4 border-r-2 border-black">
+                <span class="text-lg font-bold">Jugador</span>
+                <br>
+                <span id="player-score" class="text-2xl font-bold"></span>
+            </div>
+        
+            <div class="w-5/12 text-center border-4 border-l-2 border-black">
+                <span class="text-lg font-bold">Máquina</span>
+                <br>
+                <span id="machine-score" class="text-2xl font-bold"></span>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="flex flex-wrap justify-center">
+    
+            <div class="w-full mb-6 lg:mb-12 text-2xl text-center">
+                <span class="text-lg lg:text-2xl font-bold border-b-2 border-black">Escoge uno</span>
+            </div>
+    
+            <div class="w-1/4 sm:w-1/6 my-1 mx-6 md:mx-8 xl:mx-12">
+                <img id="rock-option" class="cursor-pointer transition duration-500 ease-in-out transform hover:scale-110" src="./images/piedra.png" alt="Símbolo de piedra" style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+            </div>
+            <div class="w-1/4 sm:w-1/6 my-1 mx-6 md:mx-8 xl:mx-12">
+                <img id="paper-option" class="cursor-pointer transition duration-500 ease-in-out transform hover:scale-110" src="./images/papel.png" alt="Símbolo de papel" style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+            </div>
+            <div class="w-1/4 sm:w-1/6 my-1 mx-6 md:mx-8 xl:mx-12">
+                <img id="scissors-option" class="cursor-pointer transition duration-500 ease-in-out transform hover:scale-110" src="./images/tijera.png" alt="Símbolo de tijera" style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+            </div>
+    
+        </div>
+    </div>
+
+    <div id="match-score" class="container py-4 hidden">
+        <div class="flex flex-wrap justify-center self-center text-center">
+
+            <div class="w-full mb-8">
+                <span id="game-result" class="text-2xl lg:text-3xl font-bold"></span>
+            </div>
+        
+            <div class="w-1/6 sm:w-1/12 mx-4">
+                <img id="player-choice" src="" alt="">
+                <span class="text-md lg:text-lg font-bold">Jugador</span>
+            </div>
+            <div class="w-1/6 sm:w-1/12 mx-4 text-2xl font-bold">
+                Vs.
+            </div>
+            <div class="w-1/6 sm:w-1/12 mx-4">
+                <img id="machine-choice" src="" alt="">
+                <span class="text-md lg:text-lg font-bold">Máquina</span>
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
